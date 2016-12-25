@@ -99,12 +99,19 @@ function main() {
 		echo -e "$red";
 		echo -e "Specified toolchain path: $nocol ${CROSS_COMPILE}";
 	fi;
-	if [ "${USE_CCACHE}" == "1" ]; then
-		CCACHE_PATH=/usr/bin/ccache;
-		export CROSS_COMPILE="${CCACHE_PATH} ${CROSS_COMPILE}";
-		export JOBS=16;
-		echo -e "$red";
-		echo -e "You have enabled ccache through *export USE_CCACHE=1*, now using ccache...$nocol";
+	if [ "${USE_CCACHE}" == 1 ]; then
+		if [ -e $(which ccache) ]; then
+			CCACHE_PATH=$(which ccache | head -1);
+			export CROSS_COMPILE="${CCACHE_PATH} ${CROSS_COMPILE}";
+			export JOBS=16;
+			echo -e "$red";
+			echo -e "You have installed ccache, now using it...$nocol";
+		else
+			echo -e "$red";
+			echo -e "You haven't installed ccache. Please installing by using *sudo apt-get install ccache*"
+			echo -e "Exiting...$nocol"
+			exit 1;
+		fi;
 	fi;
 
 	echo -e "***************************************************************";
