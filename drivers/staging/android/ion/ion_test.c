@@ -27,7 +27,7 @@
 #include <linux/uaccess.h>
 #include <linux/vmalloc.h>
 
-#include "ion.h"
+#include <linux/ion.h>
 #include "../uapi/ion_test.h"
 
 #define u64_to_uptr(x) ((void __user *)(unsigned long)(x))

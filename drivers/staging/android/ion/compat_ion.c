@@ -18,7 +18,7 @@
 #include <linux/fs.h>
 #include <linux/uaccess.h>
 
-#include "ion.h"
+#include <linux/ion.h>
 #include "compat_ion.h"
 #include "sprd/compat_sprd_ion.h"
 

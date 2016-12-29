@@ -37,7 +37,7 @@
 #include <linux/idr.h>
 #include <linux/time.h>
 
-#include "ion.h"
+#include <linux/ion.h>
 #include "ion_priv.h"
 #include "compat_ion.h"
 

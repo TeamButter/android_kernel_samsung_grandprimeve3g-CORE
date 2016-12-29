@@ -28,7 +28,7 @@
 #include <linux/types.h>
 #include <linux/device.h>
 #include <linux/sprd_iommu.h>
-#include "ion.h"
+#include <linux/ion.h>
 
 struct ion_buffer *ion_handle_buffer(struct ion_handle *handle);
 
