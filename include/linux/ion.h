@@ -18,8 +18,7 @@
 #define _LINUX_ION_H
 
 #include <linux/types.h>
-
-#include "ion_ex.h"
+#include <linux/ion_ex.h>
 
 struct ion_handle;
 struct ion_device;
