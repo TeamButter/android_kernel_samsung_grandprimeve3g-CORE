@@ -14,8 +14,8 @@
  *
  */
 
-#ifndef _UAPI_LINUX_ION_H
-#define _UAPI_LINUX_ION_H
+#ifndef _LINUX_ION_EX_H
+#define _LINUX_ION_EX_H
 
 #include <linux/ioctl.h>
 #include <linux/types.h>
@@ -203,4 +203,4 @@ struct ion_custom_data {
  */
 #define ION_IOC_CUSTOM		_IOWR(ION_IOC_MAGIC, 6, struct ion_custom_data)
 
-#endif /* _UAPI_LINUX_ION_H */
+#endif /* _LINUX_ION_EX_H */
